@@ -2,12 +2,14 @@
 <!doctype html>
 <html>
 <head>
+<title>Tennis</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
               
 <body>
    <h1>Tennis</h1>
     {% if likes_same_sport == True %}
+    <img src="{{ url_for('static', filename='tennis.jpg') }}">
     <p>Tennis is amazing because it builds muscle and helps release pent up energy.</p>
     <p>The best players are </p>
     <ul>
@@ -15,6 +17,29 @@
         <li> {{i}} </li>
         {% endfor %}
     </ul>
+    <table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Quote</th>
+				<th>Medals</th>
+			</tr>
+			<tr>
+				<td>Federer</td>
+				<td>"I have learnt to be even more patient."</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>Williams</td>
+				<td>"Tennis just a game, family is forever."</td>
+				<td>5</td>
+            </tr><tr>
+                    <td>Nadal</td>
+                    <td>“I have no sense of humor about losing.”</td>
+                    <td>17</td>
+                </tr>
+
+            
+
     {% else %}
     <p>Tennis is amazing because it builds muscle and helps release pent up energy.</p>
     <p>The best players are </p>
